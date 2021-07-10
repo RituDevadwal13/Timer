@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px;
+}
+#all-btn {
+  text-align: center;
+}
+button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: none;
+  font-size: large;
+  border: black 1px solid;
+}
+button:hover {
+  background-color: #808080;
+  color: white;
+}
+#time {
+  text-align: center;
+}
+.title {
+  display: inline-block;
+}

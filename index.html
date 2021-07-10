@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="time">
+        <h1 id = "title1" class="title">00</h1>
+        <h1 class="title">:</h1>
+        <h1 id = "title2" class="title">00</h1>
+    </div>
+    <div id="all-btn">
+        <div class="btn"><button id="button-1">Start</button></div>
+        <div class="btn"><button id="button-2">Reset</button></div>
+    </div>
+    <!-- Javascript -->
+    <script>
+        var button1 = document.getElementById("button-1");
+        var button2 = document.getElementById("button-2");
+        var title = document.getElementById("title");
+        var time1 = 00;
+        var time2 = 00;
+        // when myInterval=-1 it means our timer is paused
+        var myInterval=-1;
+        button1.addEventListener("click",function(event){
+
+            //if paused start
+            if(myInterval==-1){
+                button1.innerHTML = "Pause";
+                myInterval = setInterval(function(){
+                    if(time2 < 4 ){
+                        time2++;
+                        title2.innerHTML = n(time2);
+                        
+                    }
+                    else{
+                        time2=00;
+                        time1++;
+                        title1.innerHTML = n(time1);
+                        title2.innerHTML = n(time2);
+                    }
+                
+            },1000); }
+            //else pause
+            else{
+                button1.innerHTML = "Start";
+                clearInterval(myInterval);
+                myInterval=-1;
+            }
+           
+            });
+        button2.addEventListener("click",function(event){
+            time1 = 00;
+            time2 = 00;
+            title1.innerHTML = "00";
+            title2.innerHTML = "00";
+            button1.innerHTML = "Start";
+            clearInterval(myInterval);
+            myInterval=-1;
+                
+        },1000);
+        function n(n){
+              return n > 9 ? "" + n: "0" + n;
+}
+
+    </script>
+    
+</body>
+</html>
