@@ -1,1 +1,1 @@
-# Timer using HTML, CSS and Javascript
+# Timer using HTML,CSS and Javascript
